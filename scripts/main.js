@@ -24,14 +24,14 @@ compositionListItems.forEach((listItem) => {
 });
 
 const headshotContainer = document.querySelector(".js-headshot-container");
-const title = document.querySelector(".js-title");
+const heading = document.querySelector(".js-heading-container");
 const notes = document.querySelector(".js-notes");
+
 window.addEventListener("scroll", () => {
   let distance = window.scrollY;
   if (distance > 1000) {
     return;
   } else {
-    title.style.transform = `translateY(-${distance * 0.2}px)`;
-    notes.style.transform = `translateY(-${distance * 0.2}px)`;
+    heading.style.transform = `translateY(-${distance * 0.2}px)`;
   }
 });
