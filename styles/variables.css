@@ -1,0 +1,77 @@
+:root {
+  --default-font-family: "EB Garamond";
+  /* , "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif; */
+  --background-color-dark: var(--monet-color50);
+  --background-color-light: var(--monet-color0);
+  --text-color-light: rgb(225, 219, 240);
+  --text-color-dark: rgb(40, 18, 53);
+  --monet-color0: #ded7cc;
+  /* --monet-color1: #e2cfaa;
+  --monet-color2: #d2c7b2;
+  --monet-color3: #c9b9b0;
+  --monet-color4: #c6b8a8; */
+  --monet-color5: #d2a794;
+  /* --monet-color6: #b9b4a8;
+  --monet-color7: #c9b394;
+  --monet-color8: #b6a898;
+  --monet-color9: #aea892; */
+  --monet-color10: #c8a974;
+  /* --monet-color11: #af978b;
+  --monet-color12: #a69888;
+  --monet-color13: #a99375;
+  --monet-color14: #a99c6c;
+  --monet-color15: #908976;
+  --monet-color16: #9e725f;
+  --monet-color17: #8a786a;
+  --monet-color18: #8a7256;
+  --monet-color19: #906539;
+  --monet-color20: #706957;
+  --monet-color21: #5a4e38;
+  --monet-color22: #228479; */
+  --monet-color23: #1c635b;
+  /* --monet-color24: #adbfc4;
+  --monet-color25: #95a7ae;
+  --monet-color26: #7093a8;
+  --monet-color27: #748790;
+  --monet-color28: #558f9f;
+  --monet-color29: #697789;
+  --monet-color30: #52719a;
+  --monet-color31: #4f7489;
+  --monet-color32: #358ea1;
+  --monet-color33: #526974;
+  --monet-color34: #2f718b;
+  --monet-color35: #4f596a; */
+  --monet-color36: #0d53a2;
+  /* --monet-color37: #2f6876;
+  --monet-color38: #135e8a; */
+  --monet-color39: #136c89;
+  /* --monet-color40: #2e566c;
+  --monet-color41: #165977;
+  --monet-color42: #314b56;
+  --monet-color43: #106675;
+  --monet-color44: #165769;
+  --monet-color45: #085876;
+  --monet-color46: #1d3a57;
+  --monet-color47: #094a6a;
+  --monet-color48: #075768;
+  --monet-color49: #0a4a58; */
+  --monet-color50: #093850;
+  --monet-color51: #957d97;
+  /* --monet-color52: #2e3334;
+  --monet-color53: #585555;
+  --monet-color54: #6c6c6f;
+  --monet-color55: #787569;
+  --monet-color56: #787778;
+  --monet-color57: #778575;
+  --monet-color58: #787a85;
+  --monet-color59: #867b77;
+  --monet-color60: #867c86;
+  --monet-color61: #8d8b8c;
+  --monet-color62: #989589;
+  --monet-color63: #989797;
+  --monet-color64: #989ba2; */
+  --monet-color65: #a69b97;
+  /* --monet-color66: #aea9a8;
+  --monet-color67: #b9b6b6; */
+}

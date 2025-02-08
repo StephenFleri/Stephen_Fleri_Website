@@ -1,0 +1,94 @@
+/*************/
+/* Contact */
+/*************/
+.contact-title {
+  margin: 0;
+  font-size: 70px;
+}
+.contact {
+  height: 100vh;
+  width: 100%;
+  color: var(--monet-color0);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--monet-color23);
+}
+.contact-content-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(30px, 60%, 1000px);
+  height: clamp(30px, 60%, 500px);
+}
+.form {
+  opacity: 0;
+  display: flex;
+  flex-flow: column;
+  height: fit-content;
+  transition: 2s ease;
+  /* flex: 1 0; */
+  width: clamp(30px, 80%, 1000px);
+}
+.form.show {
+  opacity: 1;
+}
+.form label {
+  color: var(--monet-color0);
+}
+.form input {
+  line-height: 30px;
+  font-size: clamp(10px, 20px, 40px);
+}
+.form input,
+.form textarea {
+  background-color: var(--monet-color0);
+  color: var(--monet-color50);
+}
+.no-select {
+  user-select: none;
+  pointer-events: none;
+}
+.phone-svg {
+  position: absolute;
+  transition: all 1s ease 2s;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.label {
+  font-size: 30px;
+}
+textarea {
+  height: 80px;
+}
+.path-animation {
+  stroke: var(--monet-color0);
+  stroke-width: 0.2;
+  fill: transparent;
+  transition: all 2s ease;
+  animation: draw 3s forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.socials-title {
+  padding: 30px;
+}
+.socials {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  & img {
+    width: 40px;
+    transition: all 200ms linear;
+    position: relative;
+  }
+  & img:hover {
+    transform: scale(1.5);
+  }
+}
