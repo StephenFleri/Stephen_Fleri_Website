@@ -63,8 +63,8 @@
   margin-top: 5px;
 }
 .compositions button:disabled {
-  background-color: whitesmoke;
-  color: slategrey;
+  background-color: rgb(147, 147, 147);
+  color: rgb(50, 59, 67);
 }
 .purchase-information {
   max-width: 80%;
