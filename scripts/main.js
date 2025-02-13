@@ -26,12 +26,21 @@ compositionListItems.forEach((listItem) => {
 const headshotContainer = document.querySelector(".js-headshot-container");
 const heading = document.querySelector(".js-heading-container");
 const notes = document.querySelector(".js-notes");
+const toTop = document.querySelector(".js-toTop");
 
 window.addEventListener("scroll", () => {
   let distance = window.scrollY;
   if (distance > 1000) {
+    toTop.style.opacity = 1;
+    toTop.style.pointerEvents = "all";
     return;
   } else {
+    toTop.style.opacity = 0;
+    toTop.style.pointerEvents = "none";
     heading.style.transform = `translateY(-${distance * 0.2}px)`;
   }
+});
+
+toTop.addEventListener("click", () => {
+  window.scrollTo(0, 0);
 });

@@ -28,10 +28,11 @@
   /*************/
   #composer,
   #teacher,
-  #marketer {
+  #performer {
     display: flex;
     flex-flow: column;
     text-align: left;
+    margin: 0 auto;
   }
   .services_text {
     min-width: 30%;

@@ -7,11 +7,42 @@ html * {
 html {
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.nav {
+  position: relative;
+  z-index: 1;
+}
+.nav ul {
+  height: 3rem;
+  background-color: var(--monet-color50);
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style-type: none;
+}
+.nav-link {
+  font-family: var(--default-font-family);
+  text-transform: uppercase;
+  display: inline-block;
+  color: var(--monet-color0);
+  text-decoration: none;
+  padding: 5px;
+}
+.nav-link:hover {
+  position: relative;
+  color: purple;
+  transform: scale(1.1) skew(10deg);
 }
 .main {
   position: relative;
 }
-.scroll-snap-y {
+.scroll-snap-y-header {
+  scroll-margin-top: 3rem;
+}
+.scroll-snap-y,
+.scroll-snap-y-header {
   scroll-snap-align: start;
   position: relative;
 }
@@ -103,9 +134,30 @@ html {
   color: var(--monet-color0);
   text-shadow: 0 0 5px black;
 }
+.toTop {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  position: fixed;
+  background-color: var(--monet-color0);
+  cursor: pointer;
+}
 @media only screen and (max-width: 1100px) {
   html {
     scroll-snap-type: unset;
+  }
+  .scroll-snap-y-header {
+    scroll-margin-top: 0;
+  }
+  .nav {
+    display: none;
   }
   .headshot {
     background-position: 60% 0;

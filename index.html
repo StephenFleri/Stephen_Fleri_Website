@@ -35,12 +35,54 @@
       crossorigin />
     <meta
       name="theme-color"
-      content="#1a1f38" />
+      content="#093850" />
     <title>Stephen Fleri</title>
   </head>
   <body>
+    <header>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a
+              href="#composer"
+              class="nav-link"
+              >Composer</a
+            >
+          </li>
+          <li>
+            <a
+              href="#performer"
+              class="nav-link"
+              >Performer</a
+            >
+          </li>
+          <li>
+            <a
+              href="#teacher"
+              class="nav-link"
+              >Teacher</a
+            >
+          </li>
+          <li>
+            <a
+              href="#compositions"
+              class="nav-link"
+              >Compositions</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="nav-link"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main class="main">
-      <div class="headshot-container scroll-snap-y js-headshot-container">
+      <div
+        class="headshot-container scroll-snap-y-header js-headshot-container">
         <div class="headshot">
           <div class="heading-container js-heading-container">
             <h1 class="title-text js-title">Stephen Fleri</h1>
@@ -174,7 +216,9 @@
       </section>
       <div class="compositions scroll-snap-y">
         <h2 class="section-title">Compositions</h2>
-        <ul class="compositions__list">
+        <ul
+          class="compositions__list"
+          id="compositions">
           <li class="compositions__list-item">
             <a href="">Minuet</a>
             <div class="compositions__list-item__details">
@@ -449,6 +493,7 @@
         </div>
       </div>
     </main>
+    <div class="toTop js-toTop">^</div>
     <script src="scripts/main.js"></script>
     <script src="scripts/carousel.js"></script>
     <script src="scripts/compositions.js"></script>
