@@ -32,7 +32,7 @@
   background: var(--monet-color65);
   border-radius: 20px;
   padding: 10px;
-  box-shadow: 0 2px 5px 1px black;
+  box-shadow: 0 2px 5px 1px rgb(29, 29, 29);
   transform: scale(1);
   transition: all 100ms;
 }
@@ -55,6 +55,7 @@
   display: flex;
   flex-flow: row;
   z-index: 3;
+  box-shadow: 0 2px 5px 1px rgb(0, 0, 0);
 }
 .piece-titlepage {
   width: 50%;
@@ -62,7 +63,7 @@
   padding: 3%;
 }
 .piece-name-button {
-  text-shadow: 0 2px 1px black;
+  text-shadow: 0 2px 1px rgb(0, 0, 0);
 }
 .piece-information-div {
   display: flex;
