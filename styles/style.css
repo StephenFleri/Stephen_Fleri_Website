@@ -46,6 +46,9 @@ html {
   scroll-snap-align: start;
   position: relative;
 }
+.scroll-snap-y-footer {
+  scroll-snap-align: end;
+}
 .headshot-container {
   position: relative;
   width: 100vw;
@@ -134,9 +137,28 @@ html {
   color: var(--monet-color0);
   text-shadow: 0 0 5px black;
 }
+.footer {
+  background: var(--monet-color50);
+  color: var(--monet-color0);
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  & a {
+    color: inherit;
+  }
+  & h4 {
+    margin-bottom: 40px;
+  }
+  & div {
+    margin: 40px 30px;
+    max-width: 500px;
+  }
+}
 .toTop {
   user-select: none;
   display: flex;
+  opacity: 0;
   justify-content: center;
   align-items: center;
   font-size: 3.5rem;
