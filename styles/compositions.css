@@ -57,20 +57,24 @@
   z-index: 3;
   box-shadow: 0 2px 5px 1px rgb(0, 0, 0);
 }
-.piece-titlepage {
-  width: 50%;
+.piece-infopage {
   min-width: 200px;
   padding: 3%;
 }
 .piece-name-button {
   text-shadow: 0 2px 1px rgb(0, 0, 0);
 }
+.piece-infopage__info {
+  word-wrap: break-word;
+  & img {
+    width: 45%;
+  }
+}
 .piece-information-div {
   display: flex;
   flex-flow: column;
   gap: 10px;
   align-items: start;
-  padding: 3%;
   padding-top: 5%;
 }
 .close-button {
@@ -89,6 +93,8 @@
   font-size: 200%;
 }
 .piece-image {
+  float: left;
+  margin-right: 3%;
   width: 100%;
   aspect-ratio: 1 / 1.414;
 }

@@ -1,7 +1,12 @@
+import { compositionsDB } from "./compositionsDB.js";
+import { CompositionsManager } from "./CompositionsManager.js";
+
 const listItems = Array.from(document.querySelectorAll(".services-list"));
 const compositionListItems = Array.from(
   document.querySelectorAll(".compositions-list")
 );
+
+new CompositionsManager(compositionsDB);
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(
