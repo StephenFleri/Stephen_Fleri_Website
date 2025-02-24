@@ -1,5 +1,6 @@
 import { compositionsDB } from "./compositionsDB.js";
 import { CompositionsManager } from "./CompositionsManager.js";
+import { ContactAnimation } from "./ContactAnimation.js";
 
 const listItems = Array.from(document.querySelectorAll(".services-list"));
 const compositionListItems = Array.from(
@@ -7,6 +8,12 @@ const compositionListItems = Array.from(
 );
 
 new CompositionsManager(compositionsDB);
+const contactAnimation = new ContactAnimation();
+
+// Cleanup on page unload if needed
+window.addEventListener("unload", () => {
+  contactAnimation.cleanup();
+});
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(
