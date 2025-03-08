@@ -112,7 +112,9 @@
 }
 
 .bassclef {
-  display: none;
+  min-width: 110px;
+  width: 20%;
+  top: 40%;
 }
 .downquavers {
   min-width: 100px;
@@ -121,7 +123,9 @@
   left: 10%;
 }
 .fermata {
-  display: none;
+  min-width: 120px;
+  right: 5%;
+  width: 30%;
 }
 .minimrest {
   min-width: 130px;
@@ -136,6 +140,12 @@
   width: 20%;
   bottom: 0%;
   right: 20%;
+}
+.contactminimrest {
+  min-width: 170px;
+  width: 25%;
+  bottom: 0%;
+  right: 10%;
 }
 
 @media only screen and (max-width: 1100px) {

@@ -19,4 +19,8 @@ export const svgDB = {
     name: "upquavers",
     src: "./images/upquavers.svg",
   },
+  6: {
+    name: "contactminimrest",
+    src: "./images/contactminimrest.svg",
+  },
 };
