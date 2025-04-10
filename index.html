@@ -36,6 +36,17 @@
     <meta
       name="theme-color"
       content="#093850" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "z_XoYnCbsvcuF7-pE",
+        });
+      })();
+    </script>
     <title>Stephen Fleri</title>
   </head>
   <body>
@@ -237,7 +248,12 @@
         <div class="contact-content-container">
           <form
             class="form"
-            action="submit">
+            action="">
+            <input
+              type="hidden"
+              name="time"
+              id="time"
+              value="" />
             <label for="name">Name</label>
             <input
               type="name"
@@ -248,10 +264,10 @@
               type="email"
               name="email"
               id="email" />
-            <label for="subject">Subject</label>
+            <label for="title">Subject</label>
             <input
               type="name"
-              name="subject"
+              name="title"
               id="subject" />
             <label for="message">Message</label>
             <textarea
@@ -261,7 +277,8 @@
               maxlength="1000"></textarea>
             <input
               type="submit"
-              value="submit" />
+              value="submit"
+              id="submit" />
             <div class="charlimit"><p></p></div>
           </form>
           <svg
@@ -354,6 +371,7 @@
       </footer>
     </main>
     <div class="toTop js-toTop">^</div>
+    <script src="scripts/emailjs.js"></script>
     <script
       type="module"
       src="scripts/main.js"></script>
