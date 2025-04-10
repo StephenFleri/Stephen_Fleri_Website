@@ -1,3 +1,4 @@
+import { addSVG } from "./addSVG.js";
 import { compositionsDB } from "./compositionsDB.js";
 import { CompositionsManager } from "./CompositionsManager.js";
 import { ContactAnimation } from "./ContactAnimation.js";
@@ -52,6 +53,8 @@ window.addEventListener("scroll", () => {
     heading.style.transform = `translateY(-${distance * 0.2}px)`;
   }
 });
+
+addSVG();
 
 toTop.addEventListener("click", () => {
   window.scrollTo(0, 0);
