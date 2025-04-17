@@ -53,7 +53,7 @@
 .compositionDiv {
   position: absolute;
   width: 95%;
-  background: url(/images/stars.jpg) no-repeat;
+  background: url(../images/stars.jpg) no-repeat;
   background-size: cover;
   padding: 5%;
   display: flex;
