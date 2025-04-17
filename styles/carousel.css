@@ -49,10 +49,9 @@
 }
 @media only screen and (max-width: 1100px) {
   .carousel-container {
-    position: static;
-    height: fit-content;
     padding: 10% 0;
     background-position: 35% 0;
+    overflow: scroll;
   }
   .carousel_slide {
     margin: 10%;
@@ -68,17 +67,13 @@
     translate: 0;
     transform: unset;
     justify-content: space-around;
-    gap: 100px;
+    gap: 20px;
   }
   .carousel_slide:first-child {
     padding-left: 0;
   }
   .carousel_slide:last-child {
     padding-right: 0;
-  }
-  .carousel_slide a {
-    padding: 0;
-    margin-top: 20px;
   }
   .slide {
     display: flex;

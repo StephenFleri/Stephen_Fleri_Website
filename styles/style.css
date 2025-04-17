@@ -192,11 +192,31 @@ html {
   html {
     scroll-snap-type: unset;
   }
+  body {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
   .scroll-snap-y-header {
     scroll-margin-top: 0;
   }
   .nav {
     display: none;
+  }
+  .heading-container {
+    width: 80vw;
+    max-width: 300px;
+    left: 0;
+    margin: 0 auto;
+  }
+  .notes {
+    width: 100px;
+    top: 0;
+  }
+  .title-text {
+    width: 100%;
+    font-size: 80px;
+    text-align: center;
   }
   .headshot {
     background-position: 60% 0;

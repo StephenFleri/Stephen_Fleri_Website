@@ -4,14 +4,17 @@ const html = document.querySelector("html");
 
 window.addEventListener("resize", (e) => {
   if (window.innerWidth < 1100) {
-    html.style.scrollSnapType = "none";
+    slide.style.transform = `translate3d(0, 0, 0)`;
   } else {
     html.style.scrollSnapType = "y mandatory";
   }
 });
 
 window.addEventListener("scroll", (e) => {
-  if (window.innerWidth < 1100) return;
+  if (window.innerWidth < 1100) {
+    slide.style.transform = `translate3d(0, 0, 0)`;
+    return;
+  }
   transform(container);
 });
 

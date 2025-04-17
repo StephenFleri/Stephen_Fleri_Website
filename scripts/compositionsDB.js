@@ -8,10 +8,10 @@ export const compositionsDB = [
     difficulty: "Advanced",
     instrumentation: "Solo Clarinet in B-flat",
     instrumentationShorthand: "Clarinet in B-flat",
-    price: "$25.00",
+    price: "$15.00",
     samplePage: "./invocation_sample.png",
     sampleRecording: "",
-    image: "/images/Invocation_sample.png",
+    image: "../images/Invocation_sample.png",
   },
   {
     name: "Hiraeth",
@@ -22,10 +22,10 @@ export const compositionsDB = [
     difficulty: "Intermediate",
     instrumentation: "Solo Piano",
     instrumentationShorthand: "Solo Piano",
-    price: "$25.00",
+    price: "$15.00",
     samplePage: "",
     sampleRecording: "",
-    image: "/images/Hiraeth_sample.png",
+    image: "../images/Hiraeth_sample.png",
   },
   {
     name: "Phantasy",
@@ -36,10 +36,10 @@ export const compositionsDB = [
     difficulty: "Intermediate / Advanced",
     instrumentation: "Solo Piano",
     instrumentationShorthand: "Solo Piano",
-    price: "$25.00",
+    price: "$15.00",
     samplePage: "",
     sampleRecording: "",
-    image: "/images/Phantasy_sample.png",
+    image: "../images/Phantasy_sample.png",
   },
   {
     name: "Swarm",
@@ -51,10 +51,10 @@ export const compositionsDB = [
     instrumentation:
       "Mixed Ensemble (Clarinet in B-flat 1 & 2, Piano 1 & 2, Flugelhorn 1 & 2, Trombone)",
     instrumentationShorthand: "Mixed Ensemble",
-    price: "$25.00",
+    price: "$15.00",
     samplePage: "",
     sampleRecording: "",
-    image: "/images/Swarm_sample.png",
+    image: "../images/Swarm_sample.png",
   },
   {
     name: "Kill The Meerkats",
@@ -66,9 +66,9 @@ export const compositionsDB = [
     instrumentation:
       "Mixed Ensemble (Clarinet in B-flat, Bassoon, Electric Guitar, Piano)",
     instrumentationShorthand: "Mixed Ensemble",
-    price: "$25.00",
+    price: "$15.00",
     samplePage: "",
     sampleRecording: "",
-    image: "/images/Kill_sample.png",
+    image: "../images/Kill_sample.png",
   },
 ];

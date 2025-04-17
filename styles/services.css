@@ -32,10 +32,15 @@
     text-align: left;
     margin: 0 auto;
   }
+  .service-title {
+    font-size: 70px;
+    color: var(--monet-color50);
+    /* text-transform: uppercase; */
+  }
   .services_text {
     min-width: 30%;
-    max-width: 80%;
-    font-size: clamp(10px, 20px, 40px);
+    max-width: 85%;
+    font-size: clamp(10px, 16px, 40px);
     padding: 0px;
     margin: 0;
   }
