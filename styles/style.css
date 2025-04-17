@@ -1,3 +1,18 @@
+:root {
+  --dark-purple: brightness(0) saturate(100%) invert(21%) sepia(15%)
+    saturate(2496%) hue-rotate(208deg) brightness(97%) contrast(92%);
+  --dark-blue: brightness(0) saturate(100%) invert(19%) sepia(50%)
+    saturate(512%) hue-rotate(215deg) brightness(96%) contrast(103%);
+  --light-blue: brightness(0) saturate(100%) invert(30%) sepia(28%)
+    saturate(2223%) hue-rotate(203deg) brightness(97%) contrast(94%);
+  --lavendar: brightness(0) saturate(100%) invert(53%) sepia(55%) saturate(238%)
+    hue-rotate(211deg) brightness(99%) contrast(97%);
+  --gold: brightness(0) saturate(100%) invert(95%) sepia(72%) saturate(7491%)
+    hue-rotate(304deg) brightness(81%) contrast(83%);
+  --light-gold: brightness(0) saturate(100%) invert(95%) sepia(23%)
+    saturate(753%) hue-rotate(305deg) brightness(104%) contrast(101%);
+}
+
 html * {
   padding: 0;
   margin: 0;
@@ -80,8 +95,8 @@ html {
   position: relative;
   top: -15px;
   width: calc(var(--heading-width) / 7);
-  filter: invert(1);
   animation: floatUp 3s linear infinite;
+  fill: white;
 }
 .title-text {
   font-size: calc(var(--heading-width) / 7);
@@ -103,6 +118,7 @@ html {
   0% {
     transform: scale(0.1) translate(0, 0);
     opacity: 0;
+    filter: var(--dark-purple);
   }
   20% {
     transform: scale(0.3) translate(-5%, -20%);
@@ -111,8 +127,7 @@ html {
   40% {
     transform: scale(0.5) translate(5%, -40%);
     opacity: 1;
-    filter: invert(65%) sepia(83%) saturate(1353%) hue-rotate(336deg)
-      brightness(101%) contrast(96%);
+    filter: var(--light-blue);
   }
   60% {
     transform: scale(0.7) translate(-10%, -60%);
@@ -121,10 +136,12 @@ html {
   80% {
     transform: scale(0.9) translate(10%, -80%);
     opacity: 1;
+    filter: var(--gold);
   }
   100% {
     transform: scale(1) translate(-5%, -100%);
     opacity: 0;
+    filter: var(--light-gold);
   }
 }
 

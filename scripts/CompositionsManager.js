@@ -16,6 +16,7 @@ export class CompositionsManager {
         (comp, index) =>
           `<li class="compositions__list-item">
             <a class="piece-name-button" data-index="${index}">${comp.name}</a>
+            <p class="piece-instrumentation-text">${comp.instrumentationShorthand}</p>
           </li>`
       )
       .join("");
@@ -54,18 +55,21 @@ export class CompositionsManager {
 
   getCompositionTemplate(composition) {
     return ` <div class="close-button">
-        <p style="position: relative; top: -1px; color: white">X</p>
+        <p>X</p>
       </div>
       <div class="piece-infopage">
-        <h1 class="piece-name">${composition.name}</h1>
-        <div class="piece-infopage__info">
-          <img
-            class="piece-image"
-            src="images/Untitled.webp"
-            alt="" />
-          <p>${composition.description ?? "No Description"}</p>
-        </div>
-        <div class="piece-information-div">
+      <div class="piece-infopage__info">
+      <img
+      class="piece-image"
+      src=${composition.image ? composition.image : "images/stars.jpg"}
+      alt="" />
+      <h1 class="piece-name">${composition.name}</h1>
+      <p>${
+        composition.description ??
+        `${composition.name} was written by Stephen Flerin for ${composition.instrumentation} in ${composition.year}.`
+      }</p>
+      </div>
+      <div class="piece-information-div">
           <p>Year of Composition: ${composition.year}</p>
           <p>Instrumentation: ${composition.instrumentation}</p>
           <p>Price ${composition.price}</p>

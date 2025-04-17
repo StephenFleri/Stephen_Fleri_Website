@@ -11,25 +11,32 @@
   height: 100vh;
 }
 .carousel_slide {
-  padding: 0 100px;
+  padding: 0 30px;
   position: absolute;
   top: 0;
+  background-color: rgba(245, 245, 245, 0.7);
   will-change: transform;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+  gap: 30px;
   align-items: center;
-  height: 100%;
-  width: calc(300vw + 200px);
+  height: 60%;
+  width: calc(300vw + 600px);
+  translate: 0% 27%;
+}
+.carousel_slide:first-child {
+  padding-left: 500px;
+}
+.carousel_slide:last-child {
+  padding-right: 500px;
 }
 .carousel_slide a {
-  color: var(--monet-color0);
   font-weight: bold;
   text-decoration: none;
   font-size: clamp(30px, 10vw, 80px);
   height: 100px;
   transition: all 0.1s linear;
-  text-shadow: 0 0 5px black;
 }
 .carousel_slide a:hover {
   color: var(--monet-color5);
@@ -44,17 +51,30 @@
   .carousel-container {
     position: static;
     height: fit-content;
-    padding: 30% 0;
+    padding: 10% 0;
     background-position: 35% 0;
   }
   .carousel_slide {
+    margin: 10%;
     padding: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     position: static;
     will-change: transform;
     flex-flow: column;
     align-items: unset;
-    width: 100vw;
+    width: 80%;
     height: unset;
+    translate: 0;
+    transform: unset;
+    justify-content: space-around;
+    gap: 100px;
+  }
+  .carousel_slide:first-child {
+    padding-left: 0;
+  }
+  .carousel_slide:last-child {
+    padding-right: 0;
   }
   .carousel_slide a {
     padding: 0;
@@ -64,9 +84,8 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    background-color: #bf969619;
+
     margin: 1.5em 5%;
-    padding: 2em;
   }
   .further-container {
     height: unset;

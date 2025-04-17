@@ -23,13 +23,15 @@
 }
 .compositions__list-item {
   display: flex;
+  flex-flow: column;
+  color: var(--text-color-dark);
   justify-content: center;
   align-items: center;
   font-size: clamp(10px, 40px, 80px);
   font-weight: bold;
   text-align: center;
   margin: 15px 9vw;
-  background: var(--monet-color65);
+  background: rgb(254, 247, 236);
   border-radius: 20px;
   padding: 10px;
   box-shadow: 0 2px 5px 1px rgb(29, 29, 29);
@@ -44,14 +46,15 @@
   transform: scale(0.99);
 }
 .compositions__list-item a {
-  color: var(--text-color-light);
+  color: var(--text-color-dark);
   text-decoration: none;
   cursor: pointer;
 }
 .compositionDiv {
   position: absolute;
   width: 95%;
-  background: rgb(130, 127, 127);
+  background: url(/images/stars.jpg) no-repeat;
+  background-size: cover;
   padding: 5%;
   display: flex;
   flex-flow: row;
@@ -62,10 +65,8 @@
   min-width: 200px;
   padding: 3%;
 }
-.piece-name-button {
-  text-shadow: 0 2px 1px rgb(0, 0, 0);
-}
 .piece-infopage__info {
+  background: #403471;
   word-wrap: break-word;
   & img {
     width: 45%;
@@ -79,6 +80,7 @@
   padding-top: 5%;
 }
 .close-button {
+  background: transparent;
   position: absolute;
   right: 10px;
   top: 10px;
@@ -89,15 +91,27 @@
   justify-content: center;
   align-content: center;
   cursor: pointer;
-  background: var(--monet-color65);
   color: black;
   font-size: 200%;
+  & p {
+    position: relative;
+    top: -1px;
+    color: white;
+  }
 }
 .piece-image {
   float: left;
   margin-right: 3%;
   width: 100%;
   aspect-ratio: 1 / 1.414;
+}
+.piece-instrumentation-text {
+  pointer-events: none;
+  font-size: small;
+  color: var(--text-color-dark);
+  padding: 0;
+  width: 100px;
+  font-weight: normal;
 }
 .purchase-information {
   max-width: 80%;
@@ -177,7 +191,7 @@
     transition: 300ms;
   }
   .compositions__list-item a {
-    color: var(--text-color-light);
+    color: var(--text-color-dark);
     text-decoration: none;
     font-size: clamp(20px, 4vw, 80px);
   }
