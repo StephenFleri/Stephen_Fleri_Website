@@ -14,9 +14,13 @@ export class CompositionsManager {
     const html = this.compositionsDB
       .map(
         (comp, index) =>
-          `<li class="compositions__list-item" data-index="${index}">
+          `<li class="compositions__list-item" id="piece${
+            index + 1
+          }" data-index="${index}">
             <a class="piece-name-button" >${comp.name}</a>
-            <p class="piece-instrumentation-text">${comp.instrumentationShorthand}</p>
+            <p class="piece-instrumentation-text">${
+              comp.instrumentationShorthand
+            }</p>
           </li>`
       )
       .join("");

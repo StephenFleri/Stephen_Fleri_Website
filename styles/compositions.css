@@ -241,3 +241,66 @@
     display: none;
   }
 }
+@media only screen and (min-width: 1100px) {
+  #piece1,
+  #piece2,
+  #piece3,
+  #piece4,
+  #piece5 {
+    position: absolute;
+    width: 260px;
+    height: 120px;
+    font-size: 30px;
+  }
+  .compositions__list-item:hover a,
+  .compositions__list-item:hover p {
+    filter: brightness(0) saturate(100%) invert(95%) sepia(72%) saturate(7491%)
+      hue-rotate(304deg) brightness(81%) contrast(83%);
+  }
+  .compositions__list-item:hover {
+    box-shadow: 0 1px 5px 1px rgba(255, 217, 0, 0.419);
+  }
+  #piece1 {
+    top: 40%;
+    left: 0%;
+  }
+  #piece2 {
+    top: 22%;
+    right: 6%;
+  }
+  #piece3 {
+    top: 24%;
+    left: 20%;
+  }
+  #piece4 {
+    top: 50%;
+    right: 20%;
+  }
+  #piece5 {
+    top: 65%;
+    left: 25%;
+  }
+  .purchase-information {
+    position: absolute;
+    bottom: 5%;
+  }
+  #compositions {
+    position: absolute;
+    top: 5%;
+  }
+  .constellation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: visible;
+  }
+
+  .constellation svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* preserveaspectratio: none; */
+  }
+}

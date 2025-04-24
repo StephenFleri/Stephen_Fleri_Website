@@ -5,6 +5,7 @@ export const addSVG = () => {
 
   // Create a container div for the composition SVGs
   const compositionDecorationDiv = document.createElement("div");
+  compositionDecorationDiv.classList.add("js-composition-decoration-div");
 
   // Style the compositionDecorationDiv
   compositionDecorationDiv.setAttribute(
@@ -64,4 +65,34 @@ export const addSVG = () => {
     }
   });
   contactDiv.appendChild(contactDecorationDiv);
+
+  const constellation = document.createElement("div");
+  constellation.classList.add("constellation");
+
+  constellation.innerHTML = `<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  preserveAspectRatio="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M45,75 L11,45 L65,60 L80,28 L31,33"
+    style="fill:none;stroke:white;stroke-width:2;vector-effect:non-scaling-stroke" />
+</svg>`;
+
+  compositionDecorationDiv.append(constellation);
+
+  let mobile = false;
+  const isMobile = () => {
+    mobile = window.innerWidth < 1100 ? true : false;
+    if (mobile) {
+      constellation.style.opacity = "0";
+    } else {
+      constellation.style.opacity = "1";
+    }
+  };
+  isMobile();
+  window.addEventListener("resize", () => {
+    isMobile();
+  });
 };
