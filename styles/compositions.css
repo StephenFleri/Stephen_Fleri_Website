@@ -138,12 +138,12 @@
   font-weight: normal;
 }
 .purchase-information {
-  max-width: 80%;
+  max-width: 950%;
   text-align: center;
-  padding-top: 10%;
-  & a {
-    color: inherit;
-  }
+  padding-top: 20px;
+}
+.purchase-information a {
+  color: inherit;
 }
 .svg-page-decoration {
   background: transparent;

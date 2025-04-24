@@ -193,9 +193,13 @@ html {
     scroll-snap-type: unset;
   }
   body {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     overflow-y: scroll;
     height: 100vh;
+  }
+  body.scroll-locked {
+    touch-action: none;
+    overflow-y: hidden;
   }
   .scroll-snap-y-header {
     scroll-margin-top: 0;

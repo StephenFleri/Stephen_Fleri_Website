@@ -10,13 +10,32 @@ window.addEventListener("resize", (e) => {
   }
 });
 
-document.addEventListener("scroll", (e) => {
-  if (window.innerWidth < 1100) {
-    slide.style.transform = `translate3d(0, 0, 0)`;
-    handleMobileScroll();
+window.addEventListener("scroll", (e) => {
+  if (window.innerWidth >= 1100) {
+    transform(container);
     return;
   }
-  transform(container);
+
+  // Check if the sticky container is visible in the viewport
+  const rect = slide.parentElement.getBoundingClientRect();
+  const isInStickyView = rect.top <= 0 && rect.bottom > 0;
+
+  if (!isInStickyView) return;
+
+  const atTop = slide.scrollTop === 0;
+  const atBottom = slide.scrollTop + slide.clientHeight >= slide.scrollHeight;
+
+  // Lock body scroll if inner div is not at edge
+  document.body.style.overflowY = !atTop && !atBottom ? "hidden" : "auto";
+  // Optional debug logs
+  if (atTop) console.log("Slide is at top");
+  else if (atBottom) console.log("Slide is at bottom");
+  else console.log("Slide is in the middle");
+  if (!atTop && !atBottom) {
+    document.body.classList.add("scroll-locked");
+  } else {
+    document.body.classList.remove("scroll-locked");
+  }
 });
 
 function transform(section) {
@@ -29,35 +48,4 @@ function transform(section) {
     html.style.scrollSnapType = "y mandatory";
   }
   slide.style.transform = `translate3d(-${percentage}vw, 0, 0)`;
-}
-
-// If scrolling on comp/perf/teacher, & in scroll direction, scroll remaining, don't scroll div.
-function handleMobileScroll() {
-  const slide = document.querySelector(".carousel_slide");
-  const slideParent = slide.parentElement;
-
-  // Get scroll positions and dimensions
-  const slideRect = slide.getBoundingClientRect();
-  const parentRect = slideParent.getBoundingClientRect();
-
-  // Calculate if there's more content to scroll
-  const hasMoreToScroll = slideRect.bottom > parentRect.bottom;
-  const isAtTop = slideRect.top >= parentRect.top;
-  const isAtBottom = slideRect.bottom <= parentRect.bottom;
-
-  // Prevent default scroll behavior when needed
-  if (hasMoreToScroll) {
-    slideParent.style.overflowY = "hidden";
-    slide.style.overflowY = "auto";
-
-    // Only allow parent scroll when at the boundaries
-    if ((isAtTop && event.deltaY < 0) || (isAtBottom && event.deltaY > 0)) {
-      slide.style.overflowY = "hidden";
-      slideParent.style.overflowY = "auto";
-    }
-  } else {
-    // Reset scroll behavior when no more content
-    slide.style.overflowY = "hidden";
-    slideParent.style.overflowY = "auto";
-  }
 }
