@@ -49,12 +49,14 @@
 }
 @media only screen and (max-width: 1100px) {
   .carousel-container {
-    padding: 10% 0;
+    /* padding: 10% 0; */
     background-position: 35% 0;
     overflow: scroll;
   }
   .carousel_slide {
     margin: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     padding: 0;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -84,6 +86,19 @@
   }
   .further-container {
     height: unset;
+    position: relative;
+  }
+  .carousel_slide {
+    /* ...existing styles... */
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    scrollbar-width: none;
+  }
+
+  .carousel-container {
+    /* ...existing styles... */
+    overflow: hidden;
     position: relative;
   }
 }
