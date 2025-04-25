@@ -193,7 +193,7 @@ html {
     scroll-snap-type: unset;
   }
   body {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
   }
@@ -224,6 +224,9 @@ html {
   }
   .headshot {
     background-position: 60% 0;
+  }
+  .carousel-container {
+    scroll-snap-stop: always;
   }
   .contact {
     height: unset;

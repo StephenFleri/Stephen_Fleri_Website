@@ -15,27 +15,6 @@ window.addEventListener("scroll", (e) => {
     transform(container);
     return;
   }
-
-  // Check if the sticky container is visible in the viewport
-  const rect = slide.parentElement.getBoundingClientRect();
-  const isInStickyView = rect.top <= 0 && rect.bottom > 0;
-
-  if (!isInStickyView) return;
-
-  const atTop = slide.scrollTop === 0;
-  const atBottom = slide.scrollTop + slide.clientHeight >= slide.scrollHeight;
-
-  // Lock body scroll if inner div is not at edge
-  document.body.style.overflowY = !atTop && !atBottom ? "hidden" : "auto";
-  // Optional debug logs
-  if (atTop) console.log("Slide is at top");
-  else if (atBottom) console.log("Slide is at bottom");
-  else console.log("Slide is in the middle");
-  if (!atTop && !atBottom) {
-    document.body.classList.add("scroll-locked");
-  } else {
-    document.body.classList.remove("scroll-locked");
-  }
 });
 
 function transform(section) {
