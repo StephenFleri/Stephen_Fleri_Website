@@ -1,5 +1,5 @@
 .carousel-container {
-  position: relative;
+  position: sticky;
   top: 0;
   background-image: url(../images/Stephen_headshot_reading-music.jpeg);
   background-size: 100%;
