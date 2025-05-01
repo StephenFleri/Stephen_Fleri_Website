@@ -11,7 +11,7 @@ export const compositionsDB = [
     price: "$15.00",
     samplePage: "./invocation_sample.png",
     sampleRecording: "",
-    image: "/images/Invocation_sample.png",
+    image: "images/Invocation_sample.png",
   },
   {
     name: "Hiraeth",
@@ -25,7 +25,7 @@ export const compositionsDB = [
     price: "$15.00",
     samplePage: "",
     sampleRecording: "",
-    image: "/images/Hiraeth_sample.png",
+    image: "images/Hiraeth_sample.png",
   },
   {
     name: "Phantasy",
@@ -39,7 +39,7 @@ export const compositionsDB = [
     price: "$15.00",
     samplePage: "",
     sampleRecording: "",
-    image: "../images/Phantasy_sample.png",
+    image: "images/Phantasy_sample.png",
   },
   {
     name: "Swarm",
@@ -54,7 +54,7 @@ export const compositionsDB = [
     price: "$15.00",
     samplePage: "",
     sampleRecording: "",
-    image: "../images/Swarm_sample.png",
+    image: "images/Swarm_sample.png",
   },
   {
     name: "Kill The Meerkats",
@@ -69,6 +69,6 @@ export const compositionsDB = [
     price: "$15.00",
     samplePage: "",
     sampleRecording: "",
-    image: "../images/Kill_sample.png",
+    image: "images/Kill_sample.png",
   },
 ];
