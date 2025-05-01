@@ -25,7 +25,7 @@ export const compositionsDB = [
     price: "$15.00",
     samplePage: "",
     sampleRecording: "",
-    image: "images/Hiraeth_sample.png",
+    image: "/Stephen_Fleri_Website/images/Hiraeth_sample.png",
   },
   {
     name: "Phantasy",
