@@ -9,7 +9,7 @@ export const compositionsDB = [
     instrumentation: "Solo Clarinet in B-flat",
     instrumentationShorthand: "Clarinet in B-flat",
     price: "$15.00",
-    samplePage: "./invocation_sample.png",
+    samplePage: "",
     sampleRecording: "",
     image: "images/Invocation_sample.png",
   },
