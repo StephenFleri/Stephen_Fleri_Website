@@ -11,7 +11,7 @@
   height: 100vh;
 }
 .carousel_slide {
-  padding: 0 30px;
+  padding: 0 20px;
   position: absolute;
   top: 0;
   background-color: rgba(245, 245, 245, 0.7);
@@ -21,7 +21,7 @@
   justify-content: space-around;
   gap: 30px;
   align-items: center;
-  height: 60%;
+  height: 70%;
   width: calc(300vw + 600px);
   translate: 0% 27%;
 }
@@ -58,8 +58,8 @@
     margin-top: 5%;
     margin-bottom: 5%;
     padding: 0;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 20px;
+    padding-bottom: 50px;
     position: static;
     will-change: transform;
     flex-flow: column;
