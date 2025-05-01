@@ -11,7 +11,7 @@ export const compositionsDB = [
     price: "$15.00",
     samplePage: "",
     sampleRecording: "",
-    image: "images/Invocation_sample.png",
+    image: "images/invocation_sample.png",
   },
   {
     name: "Hiraeth",
