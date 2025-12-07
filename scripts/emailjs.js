@@ -1,4 +1,4 @@
-const serviceId = "service_ohpfm91!!!";
+const serviceId = "service_ohpfm91";
 const templateId = "template_gyngzif";
 const publicKey = "z_XoYnCbsvcuF7-pE";
 
