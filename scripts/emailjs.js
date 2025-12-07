@@ -42,7 +42,7 @@ const successModal = () => {
 const failureModal = (error) => {
   const div = document.createElement("div");
   const title = document.createElement("h2");
-  title.innerText = "Error!";
+  title.innerText = "Error! Message not sent";
   const messageText = document.createElement("p");
   messageText.innerText =
     "Unfortunately your message could not be sent. Please try again, or contact me by my social media.";
@@ -56,7 +56,10 @@ const failureModal = (error) => {
 submit.addEventListener("click", (e) => {
   e.preventDefault();
   // If not all fields are correctly filled out, return
-  if (!isFormValid()) return;
+  if (!isFormValid()) {
+    failureModal({ message: "Please fill out all form fields" });
+    return;
+  }
 
   time.value = new Date().toLocaleString();
 
