@@ -1,4 +1,4 @@
-const serviceId = "service_ohpfm91";
+const serviceId = "service_ohpfm91!!!";
 const templateId = "template_gyngzif";
 const publicKey = "z_XoYnCbsvcuF7-pE";
 
@@ -23,7 +23,7 @@ const isFormValid = () => {
     message.value !== ""
   )
     return true;
-  return true;
+  return false;
 };
 
 // Create a modal which informs the user of successful submission
@@ -31,10 +31,24 @@ const successModal = () => {
   const div = document.createElement("div");
   const title = document.createElement("h2");
   title.innerText = "Success!";
-  const message = document.createElement("p");
-  message.innerText =
+  const messageText = document.createElement("p");
+  messageText.innerText =
     "Thank you for your email. It was successfully submitted.";
-  div.append(title, message);
+  div.append(title, messageText);
+  contact.append(div);
+};
+
+// Create a modal which informs the user of failed submission
+const failureModal = (error) => {
+  const div = document.createElement("div");
+  const title = document.createElement("h2");
+  title.innerText = "Error!";
+  const messageText = document.createElement("p");
+  messageText.innerText =
+    "Unfortunately your message could not be sent. Please try again, or contact me by my social media.";
+  const errorDetails = document.createElement("p");
+  errorDetails.innerText = `Error: ${error.text || error.message || "Unknown error"}`;
+  div.append(title, messageText, errorDetails);
   contact.append(div);
 };
 
@@ -59,18 +73,19 @@ submit.addEventListener("click", (e) => {
   emailjs.sendForm(serviceId, templateId, form).then(
     () => {
       console.log("SUCCESS!");
+      // Reset field values
+      name.value = "";
+      email.value = "";
+      subject.value = "";
+      message.value = "";
+      successModal();
     },
     (error) => {
       console.log("FAILED...", error);
+      // Don't reset form on failure, show error modal
+      failureModal(error);
     },
   );
-
-  // Reset field values
-  name.value = "";
-  email.value = "";
-  subject.value = "";
-  message.value = "";
-  successModal();
 });
 
 form.addEventListener("submit", (e) => {

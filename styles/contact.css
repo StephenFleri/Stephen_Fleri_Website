@@ -48,6 +48,7 @@
 }
 .form input,
 .form textarea {
+  font-size: 15pt;
   background-color: var(--monet-color0);
   color: var(--monet-color50);
 }
